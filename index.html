@@ -15,26 +15,28 @@ scroll-behavior:smooth;
 }
 body{
 font-family:'Inter',sans-serif;
-background:#020617;
-color:white;
+background:#ffffff;
+color:#0f172a;
 }
 .hero-bg{
 background:
-radial-gradient(circle at top left, rgba(245,158,11,.15), transparent 35%),
-radial-gradient(circle at bottom right, rgba(59,130,246,.15), transparent 35%),
-#020617;
+radial-gradient(circle at top left, rgba(245,158,11,.08), transparent 40%),
+radial-gradient(circle at bottom right, rgba(59,130,246,.05), transparent 40%),
+#ffffff;
 }
 .glass{
-background:rgba(15,23,42,.6);
+background:rgba(255,255,255,.75);
 backdrop-filter:blur(12px);
 -webkit-backdrop-filter:blur(12px);
 }
 .card{
 transition:.4s;
+background:#f8fafc;
 }
 .card:hover{
 transform:translateY(-10px);
-border-color: rgba(245, 158, 11, 0.4);
+border-color: #f59e0b;
+box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1);
 }
 .fade{
 opacity:0;
@@ -53,222 +55,224 @@ display: none;
 
 <body class="overflow-x-hidden">
 
-<nav class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+<nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<h1 class="font-black text-2xl">
-AYAN<span class="text-amber-400">.</span>
+<h1 class="font-black text-2xl text-slate-900">
+AYAN<span class="text-amber-500">.</span>
 </h1>
 
-<div class="hidden md:flex gap-8 font-medium text-slate-300">
-<a href="#about" class="hover:text-amber-400 transition-colors">About</a>
-<a href="#skills" class="hover:text-amber-400 transition-colors">Skills</a>
-<a href="#experience" class="hover:text-amber-400 transition-colors">Experience</a>
-<a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+<!-- Desktop Menu -->
+<div class="hidden md:flex gap-8 font-medium text-slate-600">
+<a href="#about" class="hover:text-amber-500 transition-colors">About</a>
+<a href="#skills" class="hover:text-amber-500 transition-colors">Skills</a>
+<a href="#experience" class="hover:text-amber-500 transition-colors">Experience</a>
+<a href="#contact" class="hover:text-amber-500 transition-colors">Contact</a>
 </div>
 
-<button id="menu-btn" class="md:hidden block text-slate-300 hover:text-white focus:outline-none">
+<!-- Mobile Menu Button -->
+<button id="menu-btn" class="md:hidden block text-slate-600 hover:text-slate-900 focus:outline-none">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
 </button>
 </div>
 
-<div id="mobile-menu" class="hidden-menu md:hidden glass border-b border-slate-800 px-6 py-4 flex flex-col gap-4 font-medium text-slate-300">
-<a href="#about" class="hover:text-amber-400 transition-colors py-1">About</a>
-<a href="#skills" class="hover:text-amber-400 transition-colors py-1">Skills</a>
-<a href="#experience" class="hover:text-amber-400 transition-colors py-1">Experience</a>
-<a href="#contact" class="hover:text-amber-400 transition-colors py-1">Contact</a>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden-menu md:hidden glass border-b border-slate-200 px-6 py-4 flex flex-col gap-4 font-medium text-slate-600">
+<a href="#about" class="hover:text-amber-500 transition-colors py-1">About</a>
+<a href="#skills" class="hover:text-amber-500 transition-colors py-1">Skills</a>
+<a href="#experience" class="hover:text-amber-500 transition-colors py-1">Experience</a>
+<a href="#contact" class="hover:text-amber-500 transition-colors py-1">Contact</a>
 </div>
 </nav>
 
-<section class="hero-bg min-h-screen flex items-center pt-24 pb-12">
+<section class="hero-bg min-h-screen flex items-center pt-28 pb-12">
 <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
 
-<div>
-<div class="inline-block px-4 py-2 border border-amber-400 rounded-full text-amber-400 mb-6 font-medium text-sm tracking-wide">
-Healthcare Operations Professional
+<div class="order-2 lg:order-1">
+<div class="inline-block px-4 py-2 border border-amber-500/30 bg-amber-50 rounded-full text-amber-600 mb-6 font-semibold text-sm tracking-wide">
+Healthcare Operations Professional[span_0](start_span)[span_0](end_span)
 </div>
 
-<h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tight">
-Ayan Ahammad
+<h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-slate-900">
+Ayan Ahammad[span_1](start_span)[span_1](end_span)
 </h1>
 
-<p class="text-slate-300 text-xl mt-6 max-w-xl leading-relaxed">
-Pre-Underwriting Associate specializing in Quality Assurance,
-Healthcare Operations, SLA Compliance and Client Resolution.
+<p class="text-slate-600 text-xl mt-6 max-w-xl leading-relaxed">
+Pre-Underwriting Associate specializing in Quality Assurance, Healthcare Operations, SLA Compliance and Client Resolution.[span_2](start_span)[span_2](end_span)
 </p>
 
-<div class="text-sm text-slate-400 mt-5 space-y-2 font-medium">
-<p class="flex items-center gap-2">📍 From Sakleshpur, Hassan District</p>
-<p class="flex items-center gap-2">🏢 Currently living in Bangalore (Electronic City)</p>
+<!-- Live Resume Location Tags -->
+<div class="text-sm text-slate-500 mt-5 space-y-2 font-medium">
+<p class="flex items-center gap-2">📍 From Sakleshpur, Hassan District[span_3](start_span)[span_3](end_span)</p>
+<p class="flex items-center gap-2">🏢 Currently living in Bangalore (Electronic City)[span_4](start_span)[span_4](end_span)</p>
 </div>
 
 <div class="flex gap-4 mt-8 flex-wrap">
 <a href="AyanAhammad_Resume.pdf" download
-class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-amber-600 transition-colors text-center w-full sm:w-auto shadow-lg shadow-amber-500/10">
-Download Resume
+class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-amber-600 transition-colors text-center w-full sm:w-auto shadow-lg shadow-amber-500/20">
+Download Resume[span_5](start_span)[span_5](end_span)
 </a>
 
 <a href="#contact"
-class="border border-slate-700 px-8 py-4 rounded-xl font-medium hover:border-slate-500 transition-colors text-center w-full sm:w-auto">
-Contact Me
+class="border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-medium hover:border-slate-400 transition-colors text-center w-full sm:w-auto">
+Contact Me[span_6](start_span)[span_6](end_span)
 </a>
 </div>
 </div>
 
-<div class="flex justify-center">
-<div class="relative">
+<!-- Expanded & Corrected Photo Container to prevent cropping -->
+<div class="flex justify-center order-1 lg:order-2">
+<div class="relative p-2">
+<div class="absolute inset-0 bg-amber-400/20 rounded-full blur-xl"></div>
 <img src="ayan.jpg" alt="Ayan Ahammad"
-class="w-[320px] md:w-[380px] rounded-full border-4 border-amber-400/80 shadow-2xl object-cover aspect-square">
+class="relative w-[360px] h-[360px] md:w-[460px] md:h-[460px] rounded-full border-4 border-amber-500 shadow-2xl object-cover object-center aspect-square">
 </div>
 </div>
 
 </div>
 </section>
 
-<section id="about" class="py-24 fade">
+<section id="about" class="py-24 fade border-t border-slate-100">
 <div class="max-w-5xl mx-auto px-6">
-<h2 class="text-5xl font-bold mb-8 relative inline-block">
-About Me
-<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-400 rounded-full"></span>
+<h2 class="text-5xl font-bold mb-8 relative inline-block text-slate-900">
+About Me[span_7](start_span)[span_7](end_span)
+<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-500 rounded-full"></span>
 </h2>
 
-<p class="text-slate-300 text-lg leading-9 max-w-4xl">
-Dedicated healthcare operations professional with experience in
-medical auditing, quality assurance, SLA compliance, customer
-support, escalation handling and documentation review. 
+<p class="text-slate-600 text-lg leading-9 max-w-4xl">
+Dedicated healthcare operations professional with experience in medical auditing, quality assurance, SLA compliance, customer support, escalation handling and documentation review.[span_8](start_span)[span_8](end_span)
 <br><br>
-Graduate in Biotechnology and Biochemistry with strong analytical,
-communication and problem-solving skills focused on streamlining workflows and managing operational standards.
+Graduate in Biotechnology and Biochemistry with strong analytical, communication and problem-solving skills focused on streamlining workflows and managing operational standards.[span_9](start_span)[span_9](end_span)
 </p>
 </div>
 </section>
 
-<section class="py-20 fade bg-slate-950/40 border-y border-slate-900">
+<section class="py-20 fade bg-slate-50 border-y border-slate-100">
 <div class="max-w-6xl mx-auto px-6">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 <div>
-<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="1">0</h3>
-<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Years Experience</p>
+<h3 class="counter text-5xl font-black text-amber-500 mb-1" data-target="1">0</h3>[span_10](start_span)[span_10](end_span)
+<p class="text-sm uppercase tracking-wider text-slate-500 font-semibold">Years Experience</p>[span_11](start_span)[span_11](end_span)
 </div>
 
 <div>
-<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="50">0</h3>
-<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Cases Managed</p>
+<h3 class="counter text-5xl font-black text-amber-500 mb-1" data-target="50">0</h3>[span_12](start_span)[span_12](end_span)
+<p class="text-sm uppercase tracking-wider text-slate-500 font-semibold">Cases Managed</p>[span_13](start_span)[span_13](end_span)
 </div>
 
 <div>
-<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="100">0</h3>
-<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">% SLA Focus</p>
+<h3 class="counter text-5xl font-black text-amber-500 mb-1" data-target="100">0</h3>[span_14](start_span)[span_14](end_span)
+<p class="text-sm uppercase tracking-wider text-slate-500 font-semibold">% SLA Focus</p>[span_15](start_span)[span_15](end_span)
 </div>
 
 <div>
-<h3 class="text-5xl font-black text-amber-400 mb-1">B.Sc</h3>
-<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Graduate</p>
+<h3 class="text-5xl font-black text-amber-500 mb-1">B.Sc</h3>[span_16](start_span)[span_16](end_span)
+<p class="text-sm uppercase tracking-wider text-slate-500 font-semibold">Graduate</p>[span_17](start_span)[span_17](end_span)
 </div>
 </div>
 </div>
 </section>
 
-<section id="skills" class="py-24 bg-slate-900/60 fade">
+<section id="skills" class="py-24 fade">
 <div class="max-w-6xl mx-auto px-6">
-<h2 class="text-5xl font-bold text-center mb-14">
-Core Skills
+<h2 class="text-5xl font-bold text-center mb-14 text-slate-900">
+Core Skills[span_18](start_span)[span_18](end_span)
 </h2>
 
 <div class="grid md:grid-cols-3 gap-6">
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">Quality Assurance</h3>
-<p class="text-slate-400 leading-relaxed">Medical audits, data validation reviews, and process standard updates.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">Quality Assurance</h3>[span_19](start_span)[span_19](end_span)
+<p class="text-slate-600 leading-relaxed">Medical audits, data validation reviews, and process standard updates.</p>[span_20](start_span)[span_20](end_span)
 </div>
 
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">SLA Compliance</h3>
-<p class="text-slate-400 leading-relaxed">Strict maintenance of service turnaround guidelines and performance standards.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">SLA Compliance</h3>[span_21](start_span)[span_21](end_span)
+<p class="text-slate-600 leading-relaxed">Strict maintenance of service turnaround guidelines and performance standards.</p>[span_22](start_span)[span_22](end_span)
 </div>
 
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">Client Communication</h3>
-<p class="text-slate-400 leading-relaxed">Managing complex escalation pipelines, stakeholders, and structural resolutions.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">Client Communication</h3>[span_23](start_span)[span_23](end_span)
+<p class="text-slate-600 leading-relaxed">Managing complex escalation pipelines, stakeholders, and structural resolutions.</p>[span_24](start_span)[span_24](end_span)
 </div>
 
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">Healthcare Operations</h3>
-<p class="text-slate-400 leading-relaxed">Detailed medical documentation processing and internal framework efficiency controls.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">Healthcare Operations</h3>[span_25](start_span)[span_25](end_span)
+<p class="text-slate-600 leading-relaxed">Detailed medical documentation processing and internal framework efficiency controls.</p>[span_26](start_span)[span_26](end_span)
 </div>
 
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">Reporting</h3>
-<p class="text-slate-400 leading-relaxed">Daily tracking log configuration management and vital metric milestone updates.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">Reporting</h3>[span_27](start_span)[span_27](end_span)
+<p class="text-slate-600 leading-relaxed">Daily tracking log configuration management and vital metric milestone updates.</p>[span_28](start_span)[span_28](end_span)
 </div>
 
-<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3 text-amber-400">Team Collaboration</h3>
-<p class="text-slate-400 leading-relaxed">Cross-functional squad coordination, resource sharing, and operational synergy.</p>
+<div class="card border border-slate-200 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-600">Team Collaboration</h3>[span_29](start_span)[span_29](end_span)
+<p class="text-slate-600 leading-relaxed">Cross-functional squad coordination, resource sharing, and operational synergy.</p>[span_30](start_span)[span_30](end_span)
 </div>
 </div>
 </div>
 </section>
 
-<section id="experience" class="py-24 fade">
+<section id="experience" class="py-24 fade bg-slate-50 border-t border-slate-100">
 <div class="max-w-5xl mx-auto px-6">
-<h2 class="text-5xl font-bold mb-12 relative inline-block">
-Experience
-<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-400 rounded-full"></span>
+<h2 class="text-5xl font-bold mb-12 relative inline-block text-slate-900">
+Experience[span_31](start_span)[span_31](end_span)
+<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-500 rounded-full"></span>
 </h2>
 
-<div class="border-l-2 border-amber-400 pl-8 ml-2 relative">
-<div class="absolute w-4 h-4 bg-amber-400 rounded-full -left-[9px] top-1.5 ring-4 ring-amber-400/20"></div>
+<div class="border-l-2 border-amber-500 pl-8 ml-2 relative">
+<div class="absolute w-4 h-4 bg-amber-500 rounded-full -left-[9px] top-1.5 ring-4 ring-amber-500/20"></div>
 
-<p class="text-amber-400 font-semibold tracking-wide text-sm bg-amber-400/10 inline-block px-3 py-1 rounded-md mb-3">
-Oct 2024 - Present
+<p class="text-amber-600 font-semibold tracking-wide text-sm bg-amber-50 inline-block px-3 py-1 rounded-md mb-3">
+Oct 2024 - Present[span_32](start_span)[span_32](end_span)
 </p>
 
-<h3 class="text-3xl font-bold text-white">
-Pre-Underwriting Associate
+<h3 class="text-3xl font-bold text-slate-900">
+Pre-Underwriting Associate[span_33](start_span)[span_33](end_span)
 </h3>
 
-<p class="text-slate-400 font-medium text-lg mt-1">
-MediBuddy
+<p class="text-slate-500 font-medium text-lg mt-1">
+MediBuddy[span_34](start_span)[span_34](end_span)
 </p>
 
-<ul class="list-disc ml-5 mt-4 text-slate-300 space-y-3 max-w-3xl leading-relaxed">
-<li>Validate and review detailed medical reports to ensure extreme data fidelity.</li>
-<li>Author and track comprehensive quality assurance documentation logs.</li>
-<li>Monitor internal and external turnaround metrics to retain total SLA compliance.</li>
-<li>Handle tier-2 client escalation pipelines, providing structural dispute resolution.</li>
-<li>Facilitate continuous framework feedback for cross-team operational processes.</li>
+<ul class="list-disc ml-5 mt-4 text-slate-600 space-y-3 max-w-3xl leading-relaxed">
+<li>Validate and review detailed medical reports to ensure extreme data fidelity.[span_35](start_span)[span_35](end_span)</li>
+<li>Author and track comprehensive quality assurance documentation logs.[span_36](start_span)[span_36](end_span)</li>
+<li>Monitor internal and external turnaround metrics to retain total SLA compliance.[span_37](start_span)[span_37](end_span)</li>
+<li>Handle tier-2 client escalation pipelines, providing structural dispute resolution.[span_38](start_span)[span_38](end_span)</li>
+<li>Facilitate continuous framework feedback for cross-team operational processes.[span_39](start_span)[span_39](end_span)</li>
 </ul>
 </div>
 </div>
 </section>
 
-<section id="contact" class="py-24 bg-slate-900/60 fade">
+<section id="contact" class="py-24 fade">
 <div class="max-w-3xl mx-auto px-6">
-<h2 class="text-5xl font-bold text-center mb-10">
-Let's Connect
+<h2 class="text-5xl font-bold text-center mb-10 text-slate-900">
+Let's Connect[span_40](start_span)[span_40](end_span)
 </h2>
 
 <form class="space-y-4 max-w-xl mx-auto" onsubmit="event.preventDefault();">
 <input type="text" placeholder="Name" required
-class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white">
+class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900">[span_41](start_span)[span_41](end_span)
 
 <input type="email" placeholder="Email" required
-class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white">
+class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900">[span_42](start_span)[span_42](end_span)
 
 <textarea placeholder="Message" required
-class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white h-40 resize-none"></textarea>
+class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 transition-colors text-slate-900 h-40 resize-none"></textarea>[span_43](start_span)[span_43](end_span)
 
 <button type="submit"
-class="w-full py-4 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/10">
-Send Message
+class="w-full py-4 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/20">
+Send Message[span_44](start_span)[span_44](end_span)
 </button>
 </form>
 </div>
 </section>
 
-<footer class="text-center py-8 border-t border-slate-900 text-slate-500 text-sm tracking-wide">
-&copy; 2026 Ayan Ahammad | Portfolio
+<footer class="text-center py-8 border-t border-slate-100 text-slate-400 text-sm tracking-wide">
+&copy; 2026 Ayan Ahammad | Portfolio[span_45](start_span)[span_45](end_span)
 </footer>
 
 <script>
@@ -295,7 +299,7 @@ document.querySelectorAll('.fade').forEach(el => {
 observer.observe(el);
 });
 
-// Premium Safety Fallback Layer (Ensures content is visible even if script delays loading)
+// Premium Safety Fallback Layer (Ensures elements render instantly if observer lags)
 setTimeout(() => {
 document.querySelectorAll('.fade').forEach(el => {
 el.classList.add('show');
