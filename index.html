@@ -7,333 +7,100 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
 html{
 scroll-behavior:smooth;
 }
+
 body{
-font-family:'Inter',sans-serif;
-background:#020617;
+font-family:Arial,sans-serif;
+background:#050816;
 color:white;
 }
-.hero-bg{
-background:
-radial-gradient(circle at top left, rgba(245,158,11,.15), transparent 35%),
-radial-gradient(circle at bottom right, rgba(59,130,246,.15), transparent 35%),
-#020617;
+
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
 }
+
 .glass{
-background:rgba(15,23,42,.6);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
 }
-.card{
-transition:.4s;
-}
+
 .card:hover{
-transform:translateY(-10px);
-}
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-.fade.show{
-opacity:1;
-transform:none;
+transform:translateY(-5px);
+transition:.3s;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="fixed top-0 w-full z-50 glass border-b border-slate-800">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<h1 class="font-black text-2xl">
+<!-- NAVBAR -->
+<nav class="fixed w-full glass z-50">
+<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold">
 AYAN<span class="text-amber-400">.</span>
 </h1>
 
-<div class="hidden md:flex gap-8">
+<div class="space-x-5 text-sm">
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#experience">Experience</a>
 <a href="#contact">Contact</a>
 </div>
+
 </div>
 </nav>
 
-<section class="hero-bg min-h-screen flex items-center">
-<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+<!-- HERO -->
+<section class="hero px-6 pt-24">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
 <div>
+
 <div class="inline-block px-4 py-2 border border-amber-400 rounded-full text-amber-400 mb-6">
 Healthcare Operations Professional
 </div>
 
-<h1 class="text-6xl md:text-8xl font-black leading-tight">
+<h1 class="text-5xl md:text-7xl font-bold mb-4">
 Ayan Ahammad
 </h1>
 
-<p class="text-slate-300 text-xl mt-6">
+<p class="text-slate-300 text-lg leading-8">
 Pre-Underwriting Associate specializing in Quality Assurance,
 Healthcare Operations, SLA Compliance and Client Resolution.
 </p>
 
-<div class="flex gap-4 mt-8 flex-wrap">
+<div class="mt-5 text-slate-400">
+<p>📍 From Sakleshpur, Hassan District</p>
+<p>🏙️ Currently Living in Bangalore near Electronic City</p>
+</div>
 
-<a href="AyanAhammad_Resume.pdf"
-class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold">
+<div class="flex gap-4 mt-8">
+
+<a href="AyanAhammad.pdf"
+class="bg-amber-500 text-black px-6 py-3 rounded-xl font-bold">
 Download Resume
 </a>
 
 <a href="#contact"
-class="border border-slate-700 px-8 py-4 rounded-xl">
+class="border border-slate-600 px-6 py-3 rounded-xl">
 Contact Me
 </a>
 
 </div>
+
 </div>
 
 <div class="flex justify-center">
-<img src="ayan.jpg"
-class="w-[380px] rounded-3xl border border-slate-700 shadow-2xl">
-</div>
 
-</div>
-</section>
-
-<section id="about" class="py-24 fade">
-<div class="max-w-5xl mx-auto px-6">
-
-<h2 class="text-5xl font-bold mb-8">
-About Me
-</h2>
-
-<p class="text-slate-300 text-lg leading-9">
-Dedicated healthcare operations professional with experience in
-medical auditing, quality assurance, SLA compliance, customer
-support, escalation handling and documentation review.
-
-Graduate in Biotechnology and Biochemistry with strong analytical,
-communication and problem-solving skills.
-</p>
-
-</div>
-</section>
-
-<section class="py-20 fade">
-<div class="max-w-6xl mx-auto px-6">
-
-<div class="grid md:grid-cols-4 gap-8 text-center">
-
-<div>
-<h3 class="counter text-5xl font-black text-amber-400"
-data-target="1">0</h3>
-<p>Years Experience</p>
-</div>
-
-<div>
-<h3 class="counter text-5xl font-black text-amber-400"
-data-target="50">0</h3>
-<p>Cases Managed</p>
-</div>
-
-<div>
-<h3 class="counter text-5xl font-black text-amber-400"
-data-target="100">0</h3>
-<p>SLA Focus</p>
-</div>
-
-<div>
-<h3 class="text-5xl font-black text-amber-400">
-B.Sc
-</h3>
-<p>Graduate</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="skills" class="py-24 bg-slate-900 fade">
-
-<div class="max-w-6xl mx-auto px-6">
-
-<h2 class="text-5xl font-bold text-center mb-14">
-Core Skills
-</h2>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-Quality Assurance
-</h3>
-<p class="text-slate-400">
-Medical audits and validation reviews.
-</p>
-</div>
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-SLA Compliance
-</h3>
-<p class="text-slate-400">
-Maintaining service turnaround standards.
-</p>
-</div>
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-Client Communication
-</h3>
-<p class="text-slate-400">
-Managing escalations and issue resolution.
-</p>
-</div>
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-Healthcare Operations
-</h3>
-<p class="text-slate-400">
-Documentation review and process execution.
-</p>
-</div>
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-Reporting
-</h3>
-<p class="text-slate-400">
-Daily tracking and stakeholder updates.
-</p>
-</div>
-
-<div class="card border border-slate-700 p-8 rounded-3xl">
-<h3 class="font-bold text-xl mb-3">
-Team Collaboration
-</h3>
-<p class="text-slate-400">
-Cross-functional coordination and support.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="experience" class="py-24 fade">
-
-<div class="max-w-5xl mx-auto px-6">
-
-<h2 class="text-5xl font-bold mb-12">
-Experience
-</h2>
-
-<div class="border-l-2 border-amber-400 pl-8">
-
-<p class="text-amber-400">
-Oct 2024 - Present
-</p>
-
-<h3 class="text-3xl font-bold">
-Pre-Underwriting Associate
-</h3>
-
-<p class="text-slate-400">
-MediBuddy
-</p>
-
-<ul class="list-disc ml-5 mt-4 text-slate-300 space-y-2">
-<li>Medical report validation and review.</li>
-<li>Quality assurance documentation.</li>
-<li>SLA monitoring and compliance.</li>
-<li>Client escalation management.</li>
-<li>Operational process support.</li>
-</ul>
-
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="py-24 bg-slate-900 fade">
-
-<div class="max-w-3xl mx-auto px-6">
-
-<h2 class="text-5xl font-bold text-center mb-10">
-Let's Connect
-</h2>
-
-<form class="space-y-4">
-
-<input
-type="text"
-placeholder="Name"
-class="w-full p-4 bg-slate-950 rounded-xl">
-
-<input
-type="email"
-placeholder="Email"
-class="w-full p-4 bg-slate-950 rounded-xl">
-
-<textarea
-placeholder="Message"
-class="w-full p-4 bg-slate-950 rounded-xl h-40"></textarea>
-
-<button
-class="w-full py-4 bg-amber-500 text-black font-bold rounded-xl">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<footer class="text-center py-8 border-t border-slate-800 text-slate-400">
-© 2026 Ayan Ahammad | Portfolio
-</footer>
-
-<script>
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-
-document.querySelectorAll('.fade').forEach(el=>{
-observer.observe(el);
-});
-
-document.querySelectorAll('.counter').forEach(counter=>{
-const target=+counter.dataset.target;
-let count=0;
-
-const update=()=>{
-count+=Math.ceil(target/40);
-
-if(count>target){
-count=target;
-}
-
-counter.innerText=count;
-
-if(count<target){
-requestAnimationFrame(update);
-}
-};
-
-update();
-});
-</script>
-
-</body>
-</html>
+<img
+src="ayan.jpg"
+alt="Ayan"
+class="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-amber-400 shadow-2xl
