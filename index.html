@@ -3,268 +3,326 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayan Ahammad | Ultra Premium Portfolio</title>
+<title>Ayan Ahammad | Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-html {
-  scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #030712;
-  color: white;
-  overflow-x: hidden;
+body{
+font-family:'Inter',sans-serif;
+background:#020617;
+color:white;
 }
-
-/* Animated gradient background */
-.bg-animated {
-  background: radial-gradient(circle at top, rgba(245,158,11,0.15), transparent 40%),
-              radial-gradient(circle at bottom, rgba(59,130,246,0.15), transparent 40%),
-              #030712;
+.hero-bg{
+background:
+radial-gradient(circle at top left, rgba(245,158,11,.15), transparent 35%),
+radial-gradient(circle at bottom right, rgba(59,130,246,.15), transparent 35%),
+#020617;
 }
-
-/* Glass effect */
-.glass {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
+.glass{
+background:rgba(15,23,42,.6);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
 }
-
-/* Fade animation */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
+.card{
+transition:.4s;
 }
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
+.card:hover{
+transform:translateY(-10px);
+border-color: rgba(245, 158, 11, 0.4);
 }
-
-/* Hover card */
-.card {
-  transition: 0.3s ease;
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
-.card:hover {
-  transform: translateY(-10px);
+.fade.show{
+opacity:1;
+transform:none;
 }
-
-/* Mobile menu */
-#menu {
-  display: none;
+#mobile-menu.hidden-menu {
+display: none;
 }
 </style>
 </head>
 
-<body class="bg-animated">
+<body class="overflow-x-hidden">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full z-50 glass">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="fixed top-0 w-full z-50 glass border-b border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<h1 class="font-black text-2xl">
+AYAN<span class="text-amber-400">.</span>
+</h1>
 
-    <h1 class="text-2xl font-black">
-      AYAN<span class="text-amber-400">.</span>
-    </h1>
+<div class="hidden md:flex gap-8 font-medium text-slate-300">
+<a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+<a href="#skills" class="hover:text-amber-400 transition-colors">Skills</a>
+<a href="#experience" class="hover:text-amber-400 transition-colors">Experience</a>
+<a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+</div>
 
-    <div class="hidden md:flex gap-8 text-sm text-slate-300">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
+<button id="menu-btn" class="md:hidden block text-slate-300 hover:text-white focus:outline-none">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
 
-    <button onclick="toggleMenu()" class="md:hidden text-white">
-      ☰
-    </button>
-
-  </div>
-
-  <div id="menu" class="md:hidden px-6 pb-4 text-slate-300">
-    <a href="#about" class="block py-2">About</a>
-    <a href="#skills" class="block py-2">Skills</a>
-    <a href="#experience" class="block py-2">Experience</a>
-    <a href="#contact" class="block py-2">Contact</a>
-  </div>
+<div id="mobile-menu" class="hidden-menu md:hidden glass border-b border-slate-800 px-6 py-4 flex flex-col gap-4 font-medium text-slate-300">
+<a href="#about" class="hover:text-amber-400 transition-colors py-1">About</a>
+<a href="#skills" class="hover:text-amber-400 transition-colors py-1">Skills</a>
+<a href="#experience" class="hover:text-amber-400 transition-colors py-1">Experience</a>
+<a href="#contact" class="hover:text-amber-400 transition-colors py-1">Contact</a>
+</div>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="min-h-screen flex items-center pt-24 px-6">
+<section class="hero-bg min-h-screen flex items-center pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-block px-4 py-2 border border-amber-400 rounded-full text-amber-400 mb-6 font-medium text-sm tracking-wide">
+Healthcare Operations Professional
+</div>
 
-    <!-- TEXT -->
-    <div>
+<h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tight">
+Ayan Ahammad
+</h1>
 
-      <div class="text-amber-400 text-sm tracking-widest mb-4">
-        HEALTHCARE OPERATIONS PROFESSIONAL
-      </div>
+<p class="text-slate-300 text-xl mt-6 max-w-xl leading-relaxed">
+Pre-Underwriting Associate specializing in Quality Assurance,
+Healthcare Operations, SLA Compliance and Client Resolution.
+</p>
 
-      <h1 class="text-5xl md:text-7xl font-black leading-tight">
-        Ayan Ahammad
-      </h1>
+<div class="text-sm text-slate-400 mt-5 space-y-2 font-medium">
+<p class="flex items-center gap-2">📍 From Sakleshpur, Hassan District</p>
+<p class="flex items-center gap-2">🏢 Currently living in Bangalore (Electronic City)</p>
+</div>
 
-      <p class="text-slate-300 mt-6 text-lg leading-relaxed">
-        Pre-Underwriting Associate specializing in Quality Assurance,
-        Healthcare Operations, SLA Compliance and Customer Resolution.
-      </p>
+<div class="flex gap-4 mt-8 flex-wrap">
+<a href="AyanAhammad_Resume.pdf" download
+class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-amber-600 transition-colors text-center w-full sm:w-auto shadow-lg shadow-amber-500/10">
+Download Resume
+</a>
 
-      <!-- LOCATION -->
-      <div class="mt-6 text-slate-400 space-y-1">
-        <p>📍 From Sakleshpur, Hassan District</p>
-        <p>🏙️ Currently living in Bangalore (Electronic City)</p>
-      </div>
+<a href="#contact"
+class="border border-slate-700 px-8 py-4 rounded-xl font-medium hover:border-slate-500 transition-colors text-center w-full sm:w-auto">
+Contact Me
+</a>
+</div>
+</div>
 
-      <!-- BUTTONS -->
-      <div class="flex gap-4 mt-8 flex-wrap">
+<div class="flex justify-center">
+<div class="relative">
+<img src="ayan.jpg" alt="Ayan Ahammad"
+class="w-[320px] md:w-[380px] rounded-full border-4 border-amber-400/80 shadow-2xl object-cover aspect-square">
+</div>
+</div>
 
-        <a href="AyanAhammad.pdf"
-           class="bg-amber-500 text-black px-6 py-3 rounded-xl font-bold">
-          Download Resume
-        </a>
-
-        <a href="#contact"
-           class="border border-slate-600 px-6 py-3 rounded-xl">
-          Contact Me
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- IMAGE -->
-    <div class="flex justify-center">
-
-      <img src="ayan.jpg"
-           class="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-amber-400 shadow-2xl">
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
+<section id="about" class="py-24 fade">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-5xl font-bold mb-8 relative inline-block">
+About Me
+<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-400 rounded-full"></span>
+</h2>
+
+<p class="text-slate-300 text-lg leading-9 max-w-4xl">
+Dedicated healthcare operations professional with experience in
+medical auditing, quality assurance, SLA compliance, customer
+support, escalation handling and documentation review. 
+<br><br>
+Graduate in Biotechnology and Biochemistry with strong analytical,
+communication and problem-solving skills focused on streamlining workflows and managing operational standards.
+</p>
+</div>
+</section>
+
+<section class="py-20 fade bg-slate-950/40 border-y border-slate-900">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="1">0</h3>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Years Experience</p>
+</div>
+
+<div>
+<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="50">0</h3>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Cases Managed</p>
+</div>
+
+<div>
+<h3 class="counter text-5xl font-black text-amber-400 mb-1" data-target="100">0</h3>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">% SLA Focus</p>
+</div>
+
+<div>
+<h3 class="text-5xl font-black text-amber-400 mb-1">B.Sc</h3>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-semibold">Graduate</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="py-24 bg-slate-900/60 fade">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="text-5xl font-bold text-center mb-14">
+Core Skills
+</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">Quality Assurance</h3>
+<p class="text-slate-400 leading-relaxed">Medical audits, data validation reviews, and process standard updates.</p>
+</div>
+
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">SLA Compliance</h3>
+<p class="text-slate-400 leading-relaxed">Strict maintenance of service turnaround guidelines and performance standards.</p>
+</div>
+
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">Client Communication</h3>
+<p class="text-slate-400 leading-relaxed">Managing complex escalation pipelines, stakeholders, and structural resolutions.</p>
+</div>
+
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">Healthcare Operations</h3>
+<p class="text-slate-400 leading-relaxed">Detailed medical documentation processing and internal framework efficiency controls.</p>
+</div>
+
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">Reporting</h3>
+<p class="text-slate-400 leading-relaxed">Daily tracking log configuration management and vital metric milestone updates.</p>
+</div>
+
+<div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
+<h3 class="font-bold text-xl mb-3 text-amber-400">Team Collaboration</h3>
+<p class="text-slate-400 leading-relaxed">Cross-functional squad coordination, resource sharing, and operational synergy.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="experience" class="py-24 fade">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-5xl font-bold mb-12 relative inline-block">
+Experience
+<span class="absolute bottom-0 left-0 w-1/3 h-1 bg-amber-400 rounded-full"></span>
+</h2>
+
+<div class="border-l-2 border-amber-400 pl-8 ml-2 relative">
+<div class="absolute w-4 h-4 bg-amber-400 rounded-full -left-[9px] top-1.5 ring-4 ring-amber-400/20"></div>
+
+<p class="text-amber-400 font-semibold tracking-wide text-sm bg-amber-400/10 inline-block px-3 py-1 rounded-md mb-3">
+Oct 2024 - Present
+</p>
+
+<h3 class="text-3xl font-bold text-white">
+Pre-Underwriting Associate
+</h3>
+
+<p class="text-slate-400 font-medium text-lg mt-1">
+MediBuddy
+</p>
+
+<ul class="list-disc ml-5 mt-4 text-slate-300 space-y-3 max-w-3xl leading-relaxed">
+<li>Validate and review detailed medical reports to ensure extreme data fidelity.</li>
+<li>Author and track comprehensive quality assurance documentation logs.</li>
+<li>Monitor internal and external turnaround metrics to retain total SLA compliance.</li>
+<li>Handle tier-2 client escalation pipelines, providing structural dispute resolution.</li>
+<li>Facilitate continuous framework feedback for cross-team operational processes.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="contact" class="py-24 bg-slate-900/60 fade">
+<div class="max-w-3xl mx-auto px-6">
+<h2 class="text-5xl font-bold text-center mb-10">
+Let's Connect
+</h2>
+
+<form class="space-y-4 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+<input type="text" placeholder="Name" required
+class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white">
+
+<input type="email" placeholder="Email" required
+class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white">
+
+<textarea placeholder="Message" required
+class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white h-40 resize-none"></textarea>
+
+<button type="submit"
+class="w-full py-4 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/10">
+Send Message
+</button>
+</form>
+</div>
+</section>
+
+<footer class="text-center py-8 border-t border-slate-900 text-slate-500 text-sm tracking-wide">
+&copy; 2026 Ayan Ahammad | Portfolio
+</footer>
+
 <script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+// Mobile Navigation Toggle Utility
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden-menu'));
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => mobileMenu.classList.add('hidden-menu'));
+});
+
+// Intersection Observer Configuration
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+entry.target.querySelectorAll('.counter').forEach(counter => runCounter(counter));
+}
+});
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.fade').forEach(el => {
+observer.observe(el);
+});
+
+// Premium Safety Fallback Layer (Ensures content is visible even if script delays loading)
+setTimeout(() => {
+document.querySelectorAll('.fade').forEach(el => {
+el.classList.add('show');
+el.querySelectorAll('.counter').forEach(counter => runCounter(counter));
+});
+}, 1200);
+
+// Smooth Digital Counter Driver Function
+function runCounter(counter) {
+if(counter.classList.contains('counted')) return;
+counter.classList.add('counted');
+
+const target = +counter.dataset.target;
+let count = 0;
+
+const update = () => {
+count += Math.ceil(target / 35);
+if(count >= target){
+counter.innerText = target;
+} else {
+counter.innerText = count;
+requestAnimationFrame(update);
+}
+};
+update();
 }
 </script>
 
 </body>
 </html>
-    <section id="about" class="py-24 fade">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 relative inline-block">
-                About Me
-                <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-amber-400 rounded-full"></span>
-            </h2>
-
-            <p class="text-slate-300 text-lg md:text-xl leading-relaxed space-y-6">
-                Dedicated healthcare operations professional with experience in medical auditing, quality assurance, SLA compliance, customer support, escalation handling, and documentation review. 
-                <br><br>
-                Graduate in Biotechnology and Biochemistry with strong analytical, communication, and problem-solving skills focused on streamlining workflows and managing operational standards.
-            </p>
-        </div>
-    </section>
-
-    <section class="py-16 bg-slate-950/50 border-y border-slate-900 fade">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <h3 class="counter text-4xl md:text-5xl font-black text-amber-400 mb-2" data-target="1">0</h3>
-                    <p class="text-sm md:text-base text-slate-400 uppercase tracking-wider font-semibold">Years Experience</p>
-                </div>
-                <div>
-                    <h3 class="counter text-4xl md:text-5xl font-black text-amber-400 mb-2" data-target="50">0</h3>
-                    <p class="text-sm md:text-base text-slate-400 uppercase tracking-wider font-semibold">Cases Managed</p>
-                </div>
-                <div>
-                    <h3 class="counter text-4xl md:text-5xl font-black text-amber-400 mb-2" data-target="100">0</h3>
-                    <p class="text-sm md:text-base text-slate-400 uppercase tracking-wider font-semibold">% SLA Focus</p>
-                </div>
-                <div>
-                    <h3 class="text-4xl md:text-5xl font-black text-amber-400 mb-2">B.Sc</h3>
-                    <p class="text-sm md:text-base text-slate-400 uppercase tracking-wider font-semibold">Graduate</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="skills" class="py-24 bg-slate-900/50 fade">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Core Skills</h2>
-                <p class="text-slate-400 max-w-md mx-auto">Specialized skillsets brought to operational healthcare management frameworks.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">QA</div>
-                    <h3 class="font-bold text-xl mb-3">Quality Assurance</h3>
-                    <p class="text-slate-400 leading-relaxed">Medical audits, data validation reviews, and process standard updates.</p>
-                </div>
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">SLA</div>
-                    <h3 class="font-bold text-xl mb-3">SLA Compliance</h3>
-                    <p class="text-slate-400 leading-relaxed">Strict maintenance of service turnaround guidelines and standards.</p>
-                </div>
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">CC</div>
-                    <h3 class="font-bold text-xl mb-3">Client Communication</h3>
-                    <p class="text-slate-400 leading-relaxed">Managing complex escalations, cross-functional channels, and swift resolutions.</p>
-                </div>
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">HO</div>
-                    <h3 class="font-bold text-xl mb-3">Healthcare Operations</h3>
-                    <p class="text-slate-400 leading-relaxed">Detailed medical documentation processing and pipeline efficiency controls.</p>
-                </div>
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">RP</div>
-                    <h3 class="font-bold text-xl mb-3">Reporting</h3>
-                    <p class="text-slate-400 leading-relaxed">Daily tracking log management and essential stakeholder milestone updates.</p>
-                </div>
-                <div class="card bg-slate-950 border border-slate-800 p-8 rounded-3xl">
-                    <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 mb-6 font-bold text-xl">TC</div>
-                    <h3 class="font-bold text-xl mb-3">Team Collaboration</h3>
-                    <p class="text-slate-400 leading-relaxed">Cross-functional team coordination, knowledge transfer, and resource synergy.</p>
-                </div>
-            </div>
-        </div>    <section id="experience" class="py-24 fade">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16 relative inline-block">
-                Experience
-                <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-amber-400 rounded-full"></span>
-            </h2>
-
-            <div class="border-l-2 border-amber-400/40 pl-6 md:pl-8 ml-2 relative space-y-12">
-                <div class="absolute w-4 h-4 bg-amber-400 rounded-full -left-[9px] top-1.5 ring-4 ring-amber-400/20"></div>
-                
-                <div>
-                    <span class="inline-block px-3 py-1 bg-amber-400/10 text-amber-400 font-semibold text-sm rounded-md mb-3">
-                        Oct 2024 - Present
-                    </span>
-                    <h3 class="text-2xl md:text-3xl font-bold text-white">
-                        Pre-Underwriting Associate
-                    </h3>
-                    <p class="text-amber-400/90 font-medium text-lg mt-1">
-                        MediBuddy
-                    </p>
-                    
-                    <ul class="list-disc ml-5 mt-4 text-slate-300 space-y-3 max-w-2xl leading-relaxed">
-                        <li>Validate and review detailed medical reports to ensure extreme data fidelity.</li>
-                        <li>Author and track comprehensive quality assurance documentation logs.</li>
-                        <li>Monitor internal and external turnaround metrics to retain total SLA compliance.</li>
-                        <li>Handle tier-2 client escalation pipelines, providing structural dispute resolution.</li>
-                        <li>Facilitate continuous framework feedback for cross-team operational processes.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </section>
-      
-    </section>
-
