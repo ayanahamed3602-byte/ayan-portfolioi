@@ -147,14 +147,17 @@ body {
     </div>
 
     <!-- Photo Container Layout Area with Floating Animation -->
-    <div class="lg:col-span-5 flex justify-center order-2 mt-6 lg:mt-0">
-        <div class="relative w-64 h-64 sm:w-[360px] sm:h-[360px] lg:w-[440px] lg:h-[440px] px-2 float-animation">
-            <div class="absolute inset-0 bg-amber-400/20 rounded-full blur-3xl animate-pulse"></div>
-            <div class="w-full h-full rounded-full border-4 border-amber-500 overflow-hidden shadow-2xl bg-slate-100 flex items-center justify-center">
+        <div class="lg:col-span-5 flex justify-center order-2 mt-6 lg:mt-0">
+        <div class="relative w-64 h-80 sm:w-[320px] sm:h-[400px] lg:w-[360px] lg:h-[450px] px-2 float-animation">
+            <!-- Soft backing glow matching the rectangle -->
+            <div class="absolute inset-0 bg-amber-400/20 rounded-3xl blur-3xl animate-pulse"></div>
+            <!-- Clean rectangular frame with premium rounded corners -->
+            <div class="w-full h-full rounded-3xl border-4 border-amber-500 overflow-hidden shadow-2xl bg-slate-100 flex items-center justify-center">
                 <img src="ayan.jpg" alt="Ayan Ahammad" class="w-full h-full object-cover object-top max-w-full max-h-full block">
             </div>
         </div>
-    </div>
+        </div>
+    
 
 </div>
 </section>
