@@ -370,6 +370,7 @@ setTimeout(() => {
 }, 1000);
 
 // Smooth Performance Digital Counter Engine Function
+// Smooth Performance Digital Counter Engine Function
 function runCounter(counter) {
     if(counter.classList.contains('counted')) return;
     counter.classList.add('counted');
@@ -382,4 +383,13 @@ function runCounter(counter) {
         if(count >= target){
             counter.innerText = target;
         } else {
-            counter.inn
+            counter.innerText = count;
+            requestAnimationFrame(update);
+        }
+    };
+    update();
+}
+</script>
+
+</body>
+</html>
