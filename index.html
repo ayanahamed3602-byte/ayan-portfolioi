@@ -51,20 +51,28 @@ body {
 #mobile-menu.hidden-menu {
     display: none;
 }
+/* Smooth float animation for the profile picture */
+@keyframes slowFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.float-animation {
+    animation: slowFloat 4s ease-in-out infinite;
+}
 </style>
 </head>
 
 <body class="overflow-x-hidden antialiased">
 
-<!-- Premium Navigation -->
+<!-- Premium Navigation (Links Made Bigger) -->
 <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
     <h1 class="font-black text-2xl tracking-tight text-slate-900">
         AYAN<span class="text-amber-500">.</span>
     </h1>
 
-    <!-- Desktop Links -->
-    <div class="hidden md:flex gap-8 font-semibold text-slate-600">
+    <!-- Desktop Links - Made Larger -->
+    <div class="hidden md:flex gap-10 font-bold text-base md:text-lg text-slate-700">
         <a href="#about" class="hover:text-amber-500 transition-colors">About</a>
         <a href="#skills" class="hover:text-amber-500 transition-colors">Skills</a>
         <a href="#experience" class="hover:text-amber-500 transition-colors">Experience</a>
@@ -72,15 +80,15 @@ body {
     </div>
 
     <!-- Mobile Button -->
-    <button id="menu-btn" class="md:hidden block text-slate-600 hover:text-slate-900 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="menu-btn" class="md:hidden block text-slate-700 hover:text-slate-900 focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
     </button>
 </div>
 
-<!-- Mobile Dropdown Menu -->
-<div id="mobile-menu" class="hidden-menu md:hidden glass border-b border-slate-200 px-6 py-5 flex flex-col gap-4 font-semibold text-slate-600 shadow-xl">
+<!-- Mobile Dropdown Menu - Made Larger -->
+<div id="mobile-menu" class="hidden-menu md:hidden glass border-b border-slate-200 px-6 py-6 flex flex-col gap-5 font-bold text-lg text-slate-700 shadow-xl">
     <a href="#about" class="hover:text-amber-500 transition-colors py-1">About</a>
     <a href="#skills" class="hover:text-amber-500 transition-colors py-1">Skills</a>
     <a href="#experience" class="hover:text-amber-500 transition-colors py-1">Experience</a>
@@ -88,8 +96,8 @@ body {
 </div>
 </nav>
 
-<!-- Hero Section Layout (Tightened up mobile spacing to remove empty halves) -->
-<section class="hero-bg pt-28 pb-12 md:py-24 flex items-center">
+<!-- Hero Section Layout -->
+<section class="hero-bg pt-32 pb-12 md:py-24 flex items-center">
 <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-8 items-center w-full">
 
     <!-- Typography Context Block -->
@@ -106,27 +114,28 @@ body {
             Pre-Underwriting Associate specializing in Quality Assurance, Healthcare Operations, and SLA Compliance. Expert at handling end-to-end customer service while managing medical records validation and appointment scheduling structures.
         </p>
 
-        <!-- Location Metadata -->
+        <!-- Location Metadata Updated -->
         <div class="text-sm text-slate-600 mt-5 space-y-2 font-semibold">
-            <p class="flex items-center justify-center lg:justify-start gap-2">📍 From Sakleshpur, Hassan District</p>
-            <p class="flex items-center justify-center lg:justify-start gap-2">🏢 Currently Living in Bangalore (Electronic City)</p>
+            <p class="flex items-center justify-center lg:justify-start gap-2">📍 Sakleshpur, Karnataka</p>
         </div>
 
+        <!-- Button actions optimized -->
         <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-center lg:justify-start">
-            <a href="AyanAhammad_Resume.pdf" download
-               class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-amber-600 transition-colors text-center shadow-lg shadow-amber-500/20 tracking-wide">
-                Download Resume
-            </a>
             <a href="#contact"
-               class="border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-semibold hover:border-slate-400 hover:bg-white/80 transition-all text-center">
+               class="bg-amber-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-amber-600 transition-colors text-center shadow-lg shadow-amber-500/20 tracking-wide">
                 Contact Me
+            </a>
+            <a href="AyanAhammad_Resume.pdf" download
+               class="border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-semibold hover:border-slate-400 hover:bg-white/80 transition-all text-center flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download Resume
             </a>
         </div>
     </div>
 
-    <!-- Photo Container Layout Area -->
+    <!-- Photo Container Layout Area with Floating Animation -->
     <div class="lg:col-span-5 flex justify-center order-2 mt-6 lg:mt-0">
-        <div class="relative w-64 h-64 sm:w-[360px] sm:h-[360px] lg:w-[440px] lg:h-[440px] px-2">
+        <div class="relative w-64 h-64 sm:w-[360px] sm:h-[360px] lg:w-[440px] lg:h-[440px] px-2 float-animation">
             <div class="absolute inset-0 bg-amber-400/20 rounded-full blur-3xl animate-pulse"></div>
             <div class="w-full h-full rounded-full border-4 border-amber-500 overflow-hidden shadow-2xl bg-slate-100 flex items-center justify-center">
                 <img src="ayan.jpg" alt="Ayan Ahammad" class="w-full h-full object-cover object-top max-w-full max-h-full block">
@@ -167,7 +176,7 @@ body {
         </div>
         <div>
             <h3 class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="100">0</h3>
-            <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">% SLA Focus</p>
+            <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">％ SLA Focus</p>
         </div>
         <div>
             <h3 class="text-4xl md:text-5xl font-black text-amber-500 mb-1">B.Sc</h3>
@@ -371,9 +380,3 @@ function runCounter(counter) {
 
 </body>
 </html>
-}
-</script>
-
-</body>
-</html>
-
