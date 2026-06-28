@@ -182,15 +182,15 @@ body {
 <div class="max-w-6xl mx-auto px-6">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-            <h3 class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="20">0</h3>
+            <h3 id="experience-counter" class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="20">0</h3>
             <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">Months Experience</p>
         </div>
         <div>
             <h3 class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="120">0</h3>
-            <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">Cases Managed</p>
+            <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">Cases Managed Daily</p>
         </div>
         <div>
-            <h3 class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="100">0</h3>
+            <h3 class="counter text-4xl md:text-5xl font-black text-amber-500 mb-1" data-target="95">0</h3>
             <p class="text-xs md:text-sm uppercase tracking-wider text-slate-600 font-bold">％ SLA Focus</p>
         </div>
         <div>
@@ -234,7 +234,7 @@ body {
             <h3 class="font-bold text-xl mb-3 text-slate-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-amber-500"></span> SLA Compliance
             </h3>
-            <p class="text-slate-600">Executing strict turnaround metrics (TAT) and aligning workflow configurations with high-priority client agreements.</p>
+            <p class="text-slate-600">Executing strict turnaround metrics (TAT) and aligning workflow configurations with high-priority client agreements at a 95% target benchmark.</p>
         </div>
 
         <div class="card border border-slate-200 p-8 rounded-3xl shadow-sm">
@@ -277,8 +277,8 @@ body {
             </p>
             
             <ul class="list-none mt-5 text-slate-700 space-y-3.5 max-w-3xl">
-                <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Managed end-to-end operational processing alongside high-volume medical file auditing protocols.</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Scheduled and coordinated patient examination processing to ensure strict tracking controls within corporate SLA guidelines.</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Managed end-to-end operational processing alongside high-volume verification frameworks, maintaining 120 verification cases daily.</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Scheduled and coordinated patient examination processing to ensure strict tracking controls within a target 95% SLA metric alignment.</span></li>
                 <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Documented detailed verification loops and quality assurance files to remove operational gaps.</span></li>
                 <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Addressed escalations from external enterprise accounts regarding delayed pathology and review logs to ensure client retention.</span></li>
                 <li class="flex items-start gap-2.5"><span class="text-amber-500 mt-1.5 text-xs">◆</span> <span>Trained and onboarded key technical groups concerning tool structures, communication systems, and processing logic.</span></li>
@@ -342,6 +342,26 @@ body {
 </footer>
 
 <script>
+// Auto-calculate dynamic experience months since start date (Oct 2024)
+function initDynamicExperience() {
+    const startDate = new Date('2024-10-01');
+    const currentDate = new Date();
+    
+    let totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12;
+    totalMonths += currentDate.getMonth() - startDate.getMonth();
+    
+    if (currentDate.getDate() < startDate.getDate()) {
+        totalMonths--;
+    }
+    
+    const counterEl = document.getElementById('experience-counter');
+    if (counterEl) {
+        counterEl.dataset.target = totalMonths;
+    }
+}
+// Initialize the calculated metric before counter engine mounts
+initDynamicExperience();
+
 // Mobile Drawer Toggler Layout Driver
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
