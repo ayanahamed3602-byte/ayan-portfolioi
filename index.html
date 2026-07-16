@@ -340,6 +340,90 @@ body {
                class="w-full p-4 bg-white/80 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 focus:bg-white transition-colors text-slate-950 placeholder-slate-400 font-medium">
 
         <textarea placeholder="Write Your Message Here..." required name="Message"
-                  class="w-full p-4 bg-white/80 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 focus:bg-white transition-colors
-            text-slate-950 placeholder-slate-400 fon
-            
+                  class="w-full p-4 bg-white/80 border border-slate-200 rounded-xl focus:outline-none focus:border-amber-500 focus:bg-white transition-colors text-slate-950 placeholder-slate-400 fon<button type="submit"
+             
+            class="w-full py-4 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-600 transition-all shadow-lg shadow-amber-500/20 tracking-wide text-center block">
+            Send Mail
+        </button>
+    </form>
+</div>
+</section>
+
+<footer class="text-center py-10 border-t border-slate-200 text-slate-400 text-sm font-medium tracking-wide flex flex-col items-center gap-2">
+    <div>&copy; 2026 Ayan Ahammad | Portfolio</div>
+    <a href="https://www.linkedin.com/in/ayan-ahammad-2973a7385" target="_blank" class="text-amber-600 hover:underline font-semibold">Connect on LinkedIn</a>
+</footer>
+
+<script>
+// Auto-calculate dynamic experience months since start date (Oct 2024)
+function initDynamicExperience() {
+    const startDate = new Date('2024-10-01');
+    const currentDate = new Date();
+    
+    let totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12;
+    totalMonths += currentDate.getMonth() - startDate.getMonth();
+    
+    if (currentDate.getDate() < startDate.getDate()) {
+        totalMonths--;
+    }
+    
+    const counterEl = document.getElementById('experience-counter');
+    if (counterEl) {
+        counterEl.dataset.target = totalMonths;
+    }
+}
+initDynamicExperience();
+
+// Mobile Drawer Toggler Layout Driver
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden-menu'));
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden-menu'));
+});
+
+// Structural Intersect Engine for Scroll Reveal Animations
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+            entry.target.querySelectorAll('.counter').forEach(counter => runCounter(counter));
+        }
+    });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.fade').forEach(el => {
+    observer.observe(el);
+});
+
+setTimeout(() => {
+    document.querySelectorAll('.fade').forEach(el => {
+        el.classList.add('show');
+        el.querySelectorAll('.counter').forEach(counter => runCounter(counter));
+    });
+}, 1000);
+
+// Smooth Performance Digital Counter Engine Function
+function runCounter(counter) {
+    if(counter.classList.contains('counted')) return;
+    counter.classList.add('counted');
+
+    const target = +counter.dataset.target;
+    let count = 0;
+
+    const update = () => {
+        count += Math.ceil(target / 35);
+        if(count >= target){
+            counter.innerText = target;
+        } else {
+            counter.innerText = count;
+            requestAnimationFrame(update);
+        }
+    };
+    update();
+}
+</script>
+
+</body>
+        </html>
